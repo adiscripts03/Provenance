@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provenance — Autonomous Policy Governance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#landing" id="nav-brand" class="brand-logo">Provenance <span class="brand-sub">STUDIO</span></a>
+      </div>
+      <div class="nav-right">
+        <button id="open-workspace-nav" class="btn-workspace-nav" type="button">Open workspace</button>
+        <button id="exit-workspace-nav" class="btn-exit-nav hidden" type="button">&larr; Back to Overview</button>
+      </div>
+    </div>
+  </nav>
+
+  <section id="landing-view" class="landing-section">
+    <div class="landing-container">
+      <div class="hero-split">
+        <div class="hero-left">
+          <div class="tag-badge">
+            <span class="tag-dot"></span>
+            <span class="tag-text">Autonomous Compliance Engine</span>
+          </div>
+
+          <h1 class="landing-headline">
+            From a Complex Action<br>
+            to Traceable Enterprise<br>
+            Compliance Verdict
+          </h1>
+
+          <p class="landing-subtext">
+            Deterministic precedence graph analyzes fragmented policies, resolves jurisdiction conflicts, and validates untrusted documents &mdash; kept on an uncompromising leash with prompt injection firewalls and human reviewer gates at every critical decision.
+          </p>
+
+          <div class="landing-cta-row">
+            <button id="open-workspace-hero" class="btn-hero-cta" type="button">
+              Open workspace &rarr;
+            </button>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-col">
+              <div class="stat-num">5</div>
+              <div class="stat-label">Precedence tiers</div>
+            </div>
+            <div class="stat-col">
+              <div class="stat-num">1 Gate</div>
+              <div class="stat-label">Human-in-the-loop review</div>
+            </div>
+            <div class="stat-col">
+              <div class="stat-num">100%</div>
+              <div class="stat-label">Deterministic resolution</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="card-top-row">
+              <div class="card-top-left">
+                <span class="run-tag">CASE #MUM-842</span>
+                <span class="status-pill active-pill">ACTIVE</span>
+              </div>
+              <div class="card-top-right">
+                <span class="mode-tag">DEFENSIVE MODE</span>
+              </div>
+            </div>
+
+            <div class="card-section-label">CORE PROPOSAL</div>
+            <div class="card-proposal-title">
+              Warehouse machinery requisition &ge; &#8377;4,80,000 from unvetted supplier
+            </div>
+
+            <div class="card-metrics-grid">
+              <div class="mini-metric">
+                <div class="mini-label">Documents Scanned</div>
+                <div class="mini-val">58 policies</div>
+              </div>
+              <div class="mini-metric">
+                <div class="mini-label">Execution Gate</div>
+                <div class="mini-val">Tier 2 Precedence Enforced</div>
+              </div>
+            </div>
+
+            <div class="card-stage-box">
+              <div class="stage-header">
+                <span class="stage-name">Tier 02 &middot; Procurement Approval Gate</span>
+                <span class="stage-badge">AWAITING SIGN-OFF</span>
+              </div>
+              <div class="stage-code">
+                def evaluate_jurisdiction(spend=480000, region="Mumbai", vendor="NEW"): ...
+              </div>
+            </div>
+
+            <div class="card-footer-row">
+              <div class="card-footer-left">Supervisor: Deterministic resolver</div>
+              <div class="card-footer-right">Latency: 184ms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pillars-section">
+      <div class="pillars-container">
+        <h2 class="pillars-header">FOUNDATIONAL PILLARS</h2>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-num">01</div>
+            <h3 class="pillar-title">Deterministic Hierarchy</h3>
+            <p class="pillar-desc">The LLM never decides compliance. Deterministic Python precedence rules resolve department, regional, and enterprise policy conflicts.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">02</div>
+            <h3 class="pillar-title">Prompt Injection Firewall</h3>
+            <p class="pillar-desc">Retrieved policies are treated strictly as untrusted data. Heuristic & model classifiers quarantine malicious instructions.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-num">03</div>
+            <h3 class="pillar-title">Immutable Audit Trail</h3>
+            <p class="pillar-desc">Every verdict cites exact section IDs with verbatim quotes. Human reviewer overrides are cryptographically tracked.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workspace-view" class="workspace-section hidden">
+    <div class="workspace-container">
+      <section class="console-section">
+        <div class="field-group">
+          <label for="preset-select" class="field-label">Benchmark Scenario</label>
+          <select id="preset-select" class="select-input">
+            <option value="canonical">Mumbai Warehouse Equipment Purchase (₹4,80,000, New Vendor, Manager approval only)</option>
+            <option value="compliant">Mumbai Warehouse Equipment Purchase with Full Approvals (Procurement + Director)</option>
+            <option value="waiver">Bangalore Sorting Center Urgent Mechanical Spares (₹1,50,000 Emergency Waiver)</option>
+            <option value="conflict">Conflicting Policy: IT Hardware Refresh vs Finance CapEx (₹2,50,000 Barcode Scanners)</option>
+            <option value="injection">Prompt Injection Attack Attempt via Malicious Vendor Document</option>
+            <option value="missing">Incomplete Scenario (Missing Spend Amount &amp; Unknown Vendor Status)</option>
+            <option value="custom">Custom Scenario...</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="scenario-input" class="field-label">Proposed Business Scenario</label>
+          <textarea id="scenario-input" class="textarea-input" rows="4" placeholder="Enter scenario details..."></textarea>
+        </div>
+
+        <div class="action-bar">
+          <button id="run-btn" class="btn-primary" type="button">
+            <span id="btn-text">Run Investigation</span>
+            <span id="btn-spinner" class="spinner hidden"></span>
+          </button>
+          <span id="status-indicator" class="status-indicator"></span>
+        </div>
+      </section>
+
+      <div id="results-area" class="results-area hidden">
+        <div id="verdict-banner" class="verdict-banner">
+          <div class="verdict-tag">Deterministic Verdict</div>
+          <div id="verdict-title" class="verdict-title">PENDING</div>
+        </div>
+
+        <div id="security-alert" class="security-alert hidden"></div>
+
+        <div class="split-layout">
+          <div class="split-col">
+            <div class="content-card">
+              <div class="card-header">Analysis &amp; Findings</div>
+              <div id="decision-reason" class="card-body"></div>
+            </div>
+
+            <div id="missing-box" class="content-card missing-card hidden">
+              <div class="card-header missing-header">Missing Mandatory Requirements</div>
+              <ul id="missing-list" class="missing-list"></ul>
+            </div>
+
+            <div class="content-card">
+              <div class="card-header action-header">Recommended Operational Action</div>
+              <div id="recommended-action" class="card-body action-body"></div>
+            </div>
+
+            <details class="facts-accordion">
+              <summary>Structured Scenario Parameters</summary>
+              <pre id="facts-pre" class="facts-code"></pre>
+            </details>
+          </div>
+
+          <div class="split-col">
+            <div class="evidence-header-line">Authoritative Evidence &amp; Citations</div>
+            <div id="evidence-container" class="evidence-container"></div>
+            <div id="confidence-notes" class="confidence-notes"></div>
+          </div>
+        </div>
+
+        <section class="override-section">
+          <details class="override-accordion">
+            <summary>Human Reviewer Override (Audit Record)</summary>
+            <form id="override-form" class="override-form">
+              <div class="override-grid">
+                <div class="field-group">
+                  <label for="override-verdict" class="field-label">Override Target Verdict</label>
+                  <select id="override-verdict" class="select-input">
+                    <option value="COMPLIANT">COMPLIANT</option>
+                    <option value="NON_COMPLIANT">NON_COMPLIANT</option>
+                    <option value="REQUIRES_REVIEW">REQUIRES_REVIEW</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="reviewer-name" class="field-label">Reviewer Name / Employee ID</label>
+                  <input type="text" id="reviewer-name" class="text-input" value="Compliance Officer" required>
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="override-justification" class="field-label">Mandatory Business Justification</label>
+                <textarea id="override-justification" class="textarea-input" rows="2" placeholder="State reason, approval reference, or exception policy..." required></textarea>
+              </div>
+              <button type="submit" class="btn-secondary">Submit Audit Override</button>
+              <span id="override-status" class="override-status"></span>
+            </form>
+          </details>
+        </section>
+      </div>
+
+      <section class="audit-section">
+        <div class="section-title">Recent Investigations Audit Log</div>
+        <div class="table-wrap">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Investigation ID</th>
+                <th>Timestamp</th>
+                <th>Scenario</th>
+                <th>Verdict</th>
+                <th>Overridden</th>
+                <th>Reviewer</th>
+              </tr>
+            </thead>
+            <tbody id="audit-tbody">
+              <tr><td colspan="6" class="empty-cell">Loading audit trail...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
